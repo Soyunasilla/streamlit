@@ -31,3 +31,7 @@ st.write(x, 'al cuadrado es', x * x)
 st.text_input("Your name", key="name")
 # You can access the value at any point with:
 st.session_state.name
+
+from PIL import Image
+image = Image.open('streamlit.jpeg')
+st.image(image, caption='Zombies')
