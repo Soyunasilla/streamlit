@@ -7,7 +7,7 @@ st.sidebar.write('Menu')
 # Add a slider to the sidebar:
 add_slider = st.sidebar.slider(
     'Select a range of values',
-    1, 56, (25.0, 75.0)
+    1, 56, (1, 56)
 )
 
 # Add a selectbox to the sidebar:
