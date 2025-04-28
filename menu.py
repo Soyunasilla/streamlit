@@ -20,8 +20,10 @@ st.title('BACO')
 st.write('Propuesta de Dashboard Movil')
 
 dataframe = pd.DataFrame(
-    np.random.randn(10,10),
-    columns=('col %d' % i for i in range(10)))
+    np.random.randint(1, 57, size=(6, 10)),
+    columns=[f'col {i}' for i in range(10)]
+)
+
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
 
