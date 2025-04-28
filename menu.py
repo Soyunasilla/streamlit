@@ -13,8 +13,8 @@ add_slider = st.sidebar.slider(
     'Select a range of values',
     0.0, 100.0, (25.0, 75.0)
 )
-st.title('Cambio')
-st.write('am')
+st.title('BACO')
+st.write('Propuesta de Dashboard Movil')
 
 dataframe = pd.DataFrame(
     np.random.randn(10, 20),
