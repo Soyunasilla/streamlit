@@ -21,6 +21,10 @@ dataframe = pd.DataFrame(
     columns=('col %d' % i for i in range(20)))
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
+
+x = st.slider('x') # 👈 este es un widget
+st.write(x, 'al cuadrado es', x * x)
+
 st.text_input("Your name", key="name")
 # You can access the value at any point with:
 st.session_state.name
