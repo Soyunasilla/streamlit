@@ -21,7 +21,7 @@ st.write('Propuesta de Dashboard Movil')
 
 dataframe = pd.DataFrame(
     np.random.randint(1, 57, size=(6, 10)),
-    columns=[f'col {i}' for i in range(10)]
+    columns=[f'AM {i}' for i in range(10)]
 )
 
 st.dataframe(dataframe)
@@ -32,6 +32,11 @@ st.text_input("Your name", key="name")
 # You can access the value at any point with:
 st.session_state.name
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
+
 image = Image.open('streamlit.jpeg')
-st.image(image, caption='Zombies')
+draw = ImageDraw.Draw(image)
+font = ImageFont.load_default()
+draw.text((10, 10), "Zombies!", fill=(255, 0, 0), font=font)
+
+st.image(image, caption='Zombies vs Guerrera Ninja')
