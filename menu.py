@@ -1,5 +1,12 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+
 st.sidebar.write('Menu')
+
+dataframe = np.random.randn(10, 20)
+st.dataframe(dataframe)
+
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
     'How would you like to be contacted?',
