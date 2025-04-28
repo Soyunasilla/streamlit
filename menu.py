@@ -21,7 +21,7 @@ st.write('Propuesta de Dashboard Movil')
 
 dataframe = pd.DataFrame(
     np.random.randn(10,10),
-    columns=('col %d' % i for i in range(56.0)))
+    columns=('col %d' % i for i in range(10)))
 
 st.dataframe(dataframe.style.highlight_max(axis=0))
 
