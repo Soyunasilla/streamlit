@@ -24,9 +24,7 @@ dataframe = pd.DataFrame(
     columns=[f'col {i}' for i in range(10)]
 )
 
-
-st.dataframe(dataframe.style.highlight_max(axis=0))
-
+st.dataframe(dataframe)
 x = st.slider('x') # 👈 este es un widget
 st.write(x, 'al cuadrado es', x * x)
 
