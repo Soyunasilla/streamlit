@@ -41,7 +41,10 @@ draw.text((10, 10), "Zombies!", fill=(255, 0, 0), font=font)
 
 st.image(image, caption='Zombies vs Guerrera Ninja')
 
-audio_file = open('myaudio.ogg', 'rb')
-audio_bytes = audio_file.read()
+# Abres el archivo OGG en modo binario
+with open('myaudio.ogg', 'rb') as audio_file:
+    audio_bytes = audio_file.read()
+
+# Aquí Streamlit muestra el player
 st.audio(audio_bytes, format='audio/ogg')
 
