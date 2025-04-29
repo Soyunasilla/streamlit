@@ -48,3 +48,6 @@ with open('myaudio.ogg', 'rb') as audio_file:
 # Aquí Streamlit muestra el player
 st.audio(audio_bytes, format='audio/ogg')
 
+video_file = open('mi_video.mp4', 'rb')
+video_bytes = video_file.read()
+
