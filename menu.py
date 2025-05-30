@@ -52,28 +52,3 @@ video_file = open('mi_video.mp4', 'rb')
 video_bytes = video_file.read()
 st.video(video_bytes)
 
-import qrcode
-
-# Tus tres cadenas
-datos = [
-    "4,399wn3kcCMJCTCTDPQJ",
-    "4,4rru3r56CMJCTCTDPQJ",
-    "4,rr8cukr9CMJCTCTDPQJ"
-]
-
-# Opciones de diseño (opcional)
-qr_opts = {
-    'version': None,       # ajusta automáticamente el tamaño
-    'error_correction': qrcode.constants.ERROR_CORRECT_M,
-    'box_size': 10,        # tamaño de cada “cuadrito”
-    'border': 4,           # ancho del borde (en cuadros)
-}
-
-for idx, texto in enumerate(datos, start=1):
-    qr = qrcode.QRCode(**qr_opts)
-    qr.add_data(texto)
-    qr.make(fit=True)
-    img = qr.make_image(fill_color="black", back_color="white")
-    nombre = f"qr_{idx}.png"
-    img.save(nombre)
-    print(f"Guardado → {nombre}")
